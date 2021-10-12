@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple</title>
+<style>
+    .couleurH1 {
+        color: blueviolet; background-color: greenyellow;
+    }
+</style>
+
+</head>
+<body text="green" bgcolor="#ADD8E6">
+    <!--
+    <h1 class="couleurH1">Mes Modules</h1>
+
+    <ul>
+        <li>Dev Web</li>
+        <li>POO</li>
+        <li>Base de données
+            <ul type="square">
+                <li>CRUD</li>
+                <li>Backup</li>
+            </ul>
+        </li>
+    </ul>
+    <table border="1" width="50%">
+        <tr>
+            <td>1</td>
+            <td rowspan="2">3</td>
+        </tr>
+        <tr>
+            <td>2</td>
+        </tr>
+    </table>
+-->
+    <br>
+    <div class="p1">
+        <input type="text" name="nom" id="nom" placeholder="Donner le nom" size="30" maxlength="40">
+        <input type="button" name="ok" id="ok" value="Cliquez moi !" onclick="message()">    
+    </div>
+    <p id="demo"> </p>
+
+<!--
+    <div style="border: solid 1px red; width: 204px; height: 204px; top: 100px; left: 100px;">
+        <div style="float: none; top: 0px; left: 0px; border: solid 1px green; width: 100px; height: 100px;">1</div>
+        <div style="float: left; top: 0px; left: 0px; border: solid 1px green; width: 100px; height: 100px;">2</div>
+        <div>3</div>
+        <div>5</div>
+    </div>
+-->
+<script>
+    function message() {
+        var nom = document.getElementById("nom");
+        //alert('Bonjour tout le monde');
+        alert(nom.value);
+        document.getElementById("demo").innerHTML = "<h2>Bonjour " + document.getElementById("nom").value + " !</h2>";
+        
+        if (nom.value == '') {
+            alert('Veuillez saisir le nom');
+        }
+    }
+</script>
+
+
+</body>
+</html>
